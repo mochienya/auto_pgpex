@@ -11,3 +11,13 @@ Small tool to to automatically get Abacus 2fa login code.
 2. [install xsel](https://github.com/kfish/xsel) (for linux users, windows users can skip this)
 3. save your Abacus private key  to `private_key.asc` (ensure it's saved with proper formatting, ie `-----BEGIN PGP PRIVATE KEY BLOCK-----\n\nKEY...` )
 4. `bun i`
+
+## How can I trust this won't do something stupid?
+Read the source code, `src/*` is less than 50 lines
+
+All this does is:
+1. Read clipboard content
+2. Read your pgp key
+3. Decode clipboard using pgp key
+4. Use regex to find login key
+5. Send that key to your clipboard

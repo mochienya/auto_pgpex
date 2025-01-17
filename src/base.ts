@@ -8,6 +8,7 @@ export async function getKeyFromMessage(armoredMessage: string): Promise<string>
   const decryptionKeys = await openpgp.readPrivateKey({ armoredKey })
 
   const { data: decryptedMessage } = await openpgp.decrypt({ message, decryptionKeys })
+
   const key = /[0-9a-f]{56}/.exec(decryptedMessage)![0]
   return key
 }
