@@ -3,7 +3,7 @@ Small tool to to automatically get Abacus 2fa login code.
 
 ## how to use
 1. copy PGP message from abacus's "Two-factor Authentication" page
-2. run the program `bun run linux.ts` or `bun run windows.ts`
+2. run the program `bun run src/linux.ts` or `bun run src/windows.ts`
 3. paste your new clipboard contents into the "Security code" field and proceed
 
 ## setup
